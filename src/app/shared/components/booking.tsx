@@ -245,8 +245,8 @@ Please contact the patient to confirm the appointment.
                 rules={[
                   { required: true, message: "Please enter your phone number" },
                   {
-                    pattern: /^[\+]?[1-9][\d]{0,15}$/,
-                    message: "Please enter a valid phone number",
+                    pattern: /^[\d]{10}$/,
+                    message: "Please enter a valid phone number with 10 digits",
                   },
                 ]}
               >
@@ -318,12 +318,6 @@ Please contact the patient to confirm the appointment.
                     Preferred Date
                   </span>
                 }
-                rules={[
-                  {
-                    required: true,
-                    message: "Please select your preferred date",
-                  },
-                ]}
               >
                 <DatePicker
                   style={{
@@ -349,12 +343,6 @@ Please contact the patient to confirm the appointment.
                     Preferred Time Slot
                   </span>
                 }
-                rules={[
-                  {
-                    required: true,
-                    message: "Please select your preferred time slot",
-                  },
-                ]}
               >
                 <Select
                   placeholder="Select time slot"
@@ -382,12 +370,6 @@ Please contact the patient to confirm the appointment.
                 What service are you looking for?
               </span>
             }
-            rules={[
-              {
-                required: true,
-                message: "Please describe the service you need",
-              },
-            ]}
           >
             <TextArea
               rows={4}

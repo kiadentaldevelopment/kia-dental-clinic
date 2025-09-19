@@ -28,14 +28,14 @@ export default function RootLayout({
       <body className={`${roboto.variable} antialiased`}>
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17371302786"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17554014295"
         />
         <Script id="google-analytics">
           {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'AW-17371302786');
+              gtag('config', 'AW-17554014295');
             `}
         </Script>
         <BookingProvider>
