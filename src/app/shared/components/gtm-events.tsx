@@ -2,7 +2,7 @@
 "use client";
 
 import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 
 // Extend Window interface to include dataLayer
 declare global {
@@ -11,7 +11,7 @@ declare global {
   }
 }
 
-export const GTM_EVENTS = () => {
+function GTMTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -22,6 +22,14 @@ export const GTM_EVENTS = () => {
   }, [pathname, searchParams]);
 
   return null;
+}
+
+export const GTM_EVENTS = () => {
+  return (
+    <Suspense fallback={null}>
+      <GTMTracker />
+    </Suspense>
+  );
 };
 
 export const pageview = (url: string) => {
