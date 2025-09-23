@@ -1,6 +1,27 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect } from "react";
+
+declare global {
+  interface Window {
+    gtag?: (
+      type: "event",
+      event: "conversion",
+      options: { send_to: string }
+    ) => void;
+  }
+}
 
 const BookingSuccessPage = () => {
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag("event", "conversion", {
+        send_to: "AW-17554014295/9a7gCJas1pkbENeAtLJB",
+      });
+    }
+  }, []);
+
   return (
     <div className="bg-white h-[calc(100vh-200px)] w-full flex flex-col items-center justify-center">
       {/* <img src="success.gif" alt="success" className="w-20 object-contain" /> */}
