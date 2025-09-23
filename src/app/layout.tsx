@@ -6,7 +6,7 @@ import Footer from "./shared/components/footer/page";
 import { BookingProvider, BookingForm } from "./shared/components";
 import "@ant-design/v5-patch-for-react-19";
 import Script from "next/script";
-import { GTM_EVENTS } from "./shared/components/gtm-events";
+// import { GTM_EVENTS } from "./shared/components/gtm-events";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -40,7 +40,7 @@ export default function RootLayout({
         `}
         </Script>
         <BookingProvider>
-          <GTM_EVENTS />
+          {/* <GTM_EVENTS /> */}
           <Header />
           {children}
           <Footer />
