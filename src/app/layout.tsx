@@ -6,7 +6,6 @@ import Footer from "./shared/components/footer/page";
 import { BookingProvider, BookingForm } from "./shared/components";
 import "@ant-design/v5-patch-for-react-19";
 import Script from "next/script";
-import Link from "next/link";
 // import { GTM_EVENTS } from "./shared/components/gtm-events";
 
 const roboto = Roboto({
