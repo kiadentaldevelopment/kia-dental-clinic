@@ -6,6 +6,7 @@ import Footer from "./shared/components/footer/page";
 import { BookingProvider, BookingForm } from "./shared/components";
 import "@ant-design/v5-patch-for-react-19";
 import Script from "next/script";
+import Link from "next/link";
 // import { GTM_EVENTS } from "./shared/components/gtm-events";
 
 const roboto = Roboto({
@@ -43,6 +44,13 @@ export default function RootLayout({
           {/* <GTM_EVENTS /> */}
           <Header />
           {children}
+          <a
+            href="https://wa.me/+918625050627"
+            target="_blank"
+            className="fixed bottom-4 right-4 z-99 h-15 w-15 hover:scale-110 transition-all duration-300"
+          >
+            <img src="/whatsapp.png" alt="WhatsApp" />
+          </a>
           <Footer />
           <BookingForm />
         </BookingProvider>
